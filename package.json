@@ -9,10 +9,12 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
+    "tailwind": "^4.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run watch:css && react-scripts start",
+    "watch:css": "npx tailwindcss -i src/index.css -o src/index-compiled.css",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
