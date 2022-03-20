@@ -1,5 +1,3 @@
-import logo from "./logo.svg";
-import "./App.css";
 import Grid from "./Components/Grid";
 import { useEffect, useState } from "react";
 import randomWord from "./Constants/GameWords";
@@ -25,7 +23,7 @@ function App() {
       </div>
       {(final == 2 || final == 1) && (
         <div className="grid place-items-center h-screen w-screen absolute top-0 left-0 rounded-lg">
-          <div className="p-10 bg-orange-100 shadow-xl rounded-lg">
+          <div className="p-10 bg-orange-100 shadow-xl rounded-lg text-center">
             {final == 2 ? (<><h2 className="mb-2">Better luck next time!</h2>
             <h1 className="text-2xl mb-4">The word was {word}.</h1></>) : (
               <h1 className="mb-2 text-xl">Nice guess! You got the word.</h1>
