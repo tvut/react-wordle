@@ -92,18 +92,19 @@ export const Row = ({ word, row, setFinal, fail }) => {
       } else {
         setFinal(fail);
       }
-      document.getElementById(row + 1 + "-" + 1).focus();
+      if(row<6)document.getElementById(row + 1 + "-" + 1).focus();
     } else {
       setInvalid(true)
     }
   };
 
   return (
-    <div className={`grid grid-cols-5 p-1 items-center ${invalid ? "border-red-400 border-4": ""}`}>
+    <div className={`border-4 grid grid-cols-5 p-1 justify-center ${invalid ? "border-red-400": "border-white"}`}>
       <Square valid={valid1} c={c1} setChar={setChar1} row={row} id={1} />
       <Square valid={valid2} c={c2} setChar={setChar2} row={row} id={2} />
       <Square valid={valid3} c={c3} setChar={setChar3} row={row} id={3} />
       <Square valid={valid4} c={c4} setChar={setChar4} row={row} id={4} />
+      <div className="flex w-full place-items-center justify-center justify-self-center mx-auto">
       {valid5 === 0 && (
         <input
           id={row + "-5"}
@@ -137,6 +138,7 @@ export const Row = ({ word, row, setFinal, fail }) => {
           {c5}
         </div>
       )}
+      </div>
     </div>
   );
 };

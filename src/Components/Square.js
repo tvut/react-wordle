@@ -18,7 +18,7 @@ export const Square = ({ valid, row, id, c, setChar }) => {
     }
   };
   return (
-    <>
+    <div className="flex w-full place-items-center justify-center justify-self-center mx-auto">
       {valid === 0 && (
         <input
           id={row + "-" + id}
@@ -52,7 +52,7 @@ export const Square = ({ valid, row, id, c, setChar }) => {
           {c}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

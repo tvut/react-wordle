@@ -4,7 +4,7 @@ import Square from "./Square";
 export const Grid = ({setFinal, word}) => {
 
   return (
-    <div style={{width:380}} className="mx-auto">
+    <div style={{width:400}} className="mx-auto">
       <Row setFinal={setFinal} fail={0} word={word} row={1}/>
       <Row setFinal={setFinal} fail={0} word={word} row={2}/>
       <Row setFinal={setFinal} fail={0} word={word} row={3}/>
